@@ -1,0 +1,21 @@
+{
+    "SETUP": {
+        "type": "python",
+        "path": "CupsManager.py",
+        "class": "CupsManager"
+    },
+    "METHODS": {
+        "backup": {
+            "allowed_groups": [
+                "sudo",
+                "admins"
+            ]
+        },
+        "restore": {
+            "allowed_groups": [
+                "sudo",
+                "admins"
+            ]
+        }
+    }
+}

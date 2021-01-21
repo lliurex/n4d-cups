@@ -1,7 +1,0 @@
-[SETUP]
-type=python
-path=CupsManager.py
-class=CupsManager
-[METHODS]
-backup=sudo,admins
-restore=sudo,admins

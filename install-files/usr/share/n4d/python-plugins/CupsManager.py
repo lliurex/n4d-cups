@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 import tempfile
 import shutil
@@ -5,6 +6,9 @@ import os
 import subprocess
 import time
 import tarfile
+import n4d.responses
+from n4d.utils import get_backup_name, n4d_mv
+
 
 class CupsManager:
 	
@@ -41,10 +45,12 @@ class CupsManager:
 			
 			tar.close()
 			
-			return [True,file_path]
+			#Old n4d:return [True,file_path]
+			return n4d.responses.build_successful_call_response(file_path)
 			
 		except Exception as e:
-			return [False,str(e)]
+			#Old n4d: return [False,str(e)]
+			return n4d.responses.build_failed_call_response(str(e))
 		
 	#def test
 	
@@ -58,7 +64,8 @@ class CupsManager:
 					break
 
 		if file_path==None:
-			return [False,"Backup file not found"]
+			#Old n4d:return [False,"Backup file not found"]
+			return n4d.responses_build_failed_call_response('Backup file not found')
 
 		try:
 
@@ -80,13 +87,15 @@ class CupsManager:
 						cmd="cp -r " + tmp_path +"/* "  + d
 						os.system(cmd)
 				
-				os.system("service cups restart")
+				os.system("systemctl restart cups.service")
 						
-				return [True,""]
+				#Old n4d: return [True,""]
+				return n4d.responses.build_successful_call_response()
 				
 		except Exception as e:
 				
-			return [False,str(e)]
+			#return [False,str(e)]
+			return n4d.responses.build_failed_call_response(str(e))
 		
 	#def test
 
