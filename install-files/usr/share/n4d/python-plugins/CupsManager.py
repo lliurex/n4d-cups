@@ -50,7 +50,7 @@ class CupsManager:
 			
 		except Exception as e:
 			#Old n4d: return [False,str(e)]
-			return n4d.responses.build_failed_call_response(str(e))
+			return n4d.responses.build_failed_call_response('',str(e))
 		
 	#def test
 	
@@ -65,7 +65,7 @@ class CupsManager:
 
 		if file_path==None:
 			#Old n4d:return [False,"Backup file not found"]
-			return n4d.responses_build_failed_call_response('Backup file not found')
+			return n4d.responses.build_successful_call_response(False,'Backup file not found')
 
 		try:
 
@@ -90,12 +90,12 @@ class CupsManager:
 				os.system("systemctl restart cups.service")
 						
 				#Old n4d: return [True,""]
-				return n4d.responses.build_successful_call_response()
+				return n4d.responses.build_successful_call_response(True)
 				
 		except Exception as e:
 				
 			#return [False,str(e)]
-			return n4d.responses.build_failed_call_response(str(e))
+			return n4d.responses.build_failed_call_response('',str(e))
 		
 	#def test
 
