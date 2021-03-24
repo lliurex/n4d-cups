@@ -1,3 +1,9 @@
+n4d-cups (0.29) focal; urgency=medium
+
+  * Initial release for focal
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 24 Mar 2021 12:00:42 +0100
+
 n4d-cups (0.19) bionic; urgency=medium
 
   * Adding sudo group

@@ -17,10 +17,10 @@ case "$1" in
 
 	fi
 	
-	n4d-modules enable-plugin /etc/n4d/conf.d/CupsManager || true
+	n4d-modules enable-plugin /etc/n4d/conf.d/CupsManager.json || true
 	;;
    upgrade)
-        n4d-modules enable-plugin /etc/n4d/conf.d/CupsManager || true
+        n4d-modules enable-plugin /etc/n4d/conf.d/CupsManager.json || true
         ;;
    abort-upgrade|abort-remove|abort-deconfigure)
 	;;
