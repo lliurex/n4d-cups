@@ -1,0 +1,27 @@
+#!/bin/bash
+
+set -e
+
+
+if [ "$1" = "remove" ] ; then
+	
+
+	PKG="n4d-cups"
+	ORIGINAL_FILE="/etc/cups/cupsd.conf"
+	NEW_DIVERTED_FILE="/etc/cups/cupsd.conf.diverted"
+	LLIUREX_FILE="/etc/cups/cupsd.conf.lliurex"
+
+
+	if [ -L "$ORIGINAL_FILE" ]; then
+		rm -rf "$ORIGINAL_FILE" || true
+		dpkg-divert --remove --package ${PKG} --rename --divert "$NEW_DIVERTED_FILE" "$ORIGINAL_FILE"
+		systemctl restart cups || true
+
+	fi
+
+
+
+fi
+#DEBHELPER#
+
+exit 0

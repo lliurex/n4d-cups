@@ -1,0 +1,54 @@
+n4d-cups (0.29) focal; urgency=medium
+
+  * Initial release for focal
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 24 Mar 2021 12:00:42 +0100
+
+n4d-cups (0.19) bionic; urgency=medium
+
+  * Adding sudo group
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Thu, 14 Feb 2019 10:42:34 +0100
+
+n4d-cups (0.18) bionic; urgency=medium
+
+  * Initial release for bionic
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Mon, 15 Oct 2018 12:11:39 +0200
+
+n4d-cups (0.8) xenial; urgency=medium
+
+  * Set browsing off
+  * Add ServerAlias
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Thu, 13 Jul 2017 14:39:08 +0200
+
+n4d-cups (0.7) xenial; urgency=high
+
+  * Browseable printers on in cupsd.conf 
+
+ -- Daniel Duran Vecino <daduve@gmail.com>  Thu, 22 Jun 2017 13:45:36 +0200
+
+n4d-cups (0.6) xenial; urgency=high
+
+  * Adding diversion for cupsd.conf
+
+ -- Daniel Duran Vecino <daduve@gmail.com>  Wed, 14 Jun 2017 16:49:09 +0200
+
+n4d-cups (0.5) xenial; urgency=medium
+
+  * First xenial release
+
+ -- M.Angel Juan <m.angel.juan@gmail.com>  Fri, 12 Feb 2016 13:05:30 +0100
+
+n4d-cups (0.2) trusty; urgency=medium
+
+  * New releases for LliureX 15.05 
+
+ -- Alfons Lloret Sananton <turix13@gmail.com>  Wed, 01 Oct 2014 18:08:03 +0200
+
+n4d-cups (0.1) precise; urgency=high
+
+  * Initial release.
+
+ -- Hector Garcia Huerta <lliurex_devel1@edu.gva.es>  Mon, 15 Sep 2014 16:58:25 +0200

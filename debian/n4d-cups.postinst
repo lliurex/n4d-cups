@@ -1,0 +1,35 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+   configure)
+        PKG="n4d-cups"
+	ORIGINAL_FILE="/etc/cups/cupsd.conf"
+	NEW_DIVERTED_FILE="/etc/cups/cupsd.conf.diverted"
+	LLIUREX_FILE="/etc/cups/cupsd.conf.lliurex"
+	
+	if [ ! -L "$ORIGINAL_FILE" ]; then
+
+		dpkg-divert --add --package ${PKG} --rename --divert "$NEW_DIVERTED_FILE" "$ORIGINAL_FILE"
+		ln -s "$LLIUREX_FILE" "$ORIGINAL_FILE"
+		systemctl restart cups || true
+
+	fi
+	
+	n4d-modules enable-plugin /etc/n4d/conf.d/CupsManager.json || true
+	;;
+   upgrade)
+        n4d-modules enable-plugin /etc/n4d/conf.d/CupsManager.json || true
+        ;;
+   abort-upgrade|abort-remove|abort-deconfigure)
+	;;
+  *)
+    echo "postinst called with unknown argument \`$1'" >&2
+    exit 1
+  ;;
+esac
+
+#DEBHELPER#
+
+exit 0
