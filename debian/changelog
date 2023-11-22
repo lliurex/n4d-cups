@@ -1,3 +1,9 @@
+n4d-cups (0.39) jammy; urgency=medium
+
+  * Initial release for Jammy
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 22 Nov 2023 16:54:19 +0100
+
 n4d-cups (0.29) focal; urgency=medium
 
   * Initial release for focal
